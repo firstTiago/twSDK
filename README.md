@@ -6,7 +6,7 @@ Ao final, [`twSDK-Core.js`](twSDK/twSDK-Core.js:1) agrega todos os módulos em u
 
 > Objetivo
 
-Fornecer uma coleção de utilitários, helpers e caches para facilitar a escrita de scripts, userscripts e ferramentas auxiliares que interajam com o jogo — evitando duplicação de lógica (ex.: parsing de coordenadas, cálculos de distância, cache massivo de world data) e padronizando acesso a dados comuns.
+Fornecer uma coleção de utilitários, helpers e caches para facilitar a escrita de scripts, userscripts e ferramentas auxiliares que interajam com o jogo, evitando duplicação de lógica (ex.: parsing de coordenadas, cálculos de distância, cache massivo de world data) e padronizando acesso a dados comuns.
 
 ## Conteúdo do SDK (visão geral dos módulos)
 
