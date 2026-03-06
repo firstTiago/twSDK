@@ -72,7 +72,7 @@ Exemplo de cabeçalho Tampermonkey (pseudocódigo):
 })();
 ```
 
-## Uso por módulo | snippets rápidos
+## Uso por módulo - Snippets rápidos
 
 Helpers (`twSDK-Helpers.js`)
 
