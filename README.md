@@ -1,6 +1,7 @@
 # TWSDK
 
 > Esta é uma biblioteca não oficial para Tribal Wars.
+
 > Este é um projeto privado, não afiliado ou apoiado por Tribal Wars.
 
 Biblioteca JavaScript utilitária para o jogo Tribal Wars PRO (TWPRO).
