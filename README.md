@@ -4,7 +4,8 @@
 
 > Este é um projeto privado, não afiliado ou apoiado por Tribal Wars.
 
-Biblioteca JavaScript utilitária para o jogo Tribal Wars PRO (TWPRO).
+Biblioteca JavaScript utilitária para o jogo Tribal Wars.
+
 Cada módulo é carregado separadamente e expõe APIs globais sob `window.TWSDK_*`.
 Ao final, [`twSDK-Core.js`](twSDK/twSDK-Core.js:1) agrega todos os módulos em um objeto único `window.TWSDK`.
 
