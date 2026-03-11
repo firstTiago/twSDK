@@ -977,9 +977,134 @@ setInterval(() => {
 - Evitar chamadas repetidas a funções que consultam dados remotos sem cache local.
 
 ## Contribuições
-
+ 
 - Abra issues com descrição clara do problema ou feature desejada.
 - Pull requests: siga o padrão de código (vanilla JS, comentários em Português/inglês onde necessário) e inclua testes manuais claros no PR.
+
+---
+
+## Referência de API
+
+Fornece uma visão detalhada dos objetos e métodos expostos por cada módulo.
+Use este bloco como consulta rápida para desenvolvimento.
+
+### TWSDK_Helpers
+
+- `getGameData(): Object` – retorna cópia segura de `game_data`.
+- `safeGet(obj, path, defaultValue): any` – acessa via notação pontuada.
+- `cleanNumber(value): number` – normaliza strings/num para inteiro.
+- `log(level, ...args): void` – envia logs (`debug`/`info`/`warn`/`error`).
+- `debug/info/warn/error(...args): void` – atalho para `log`.
+
+### TWSDK_Constants
+
+Contém apenas objetos estáticos como `buildingPoints`,
+`unitsFarmSpace`, `resPerHour`, `coordsRegex`, etc.
+
+### TWSDK_Utils
+
+- `calculateDistance(from: string, to: string): number`
+- `getContinentByCoord(coord: string): string`
+- `extractCoords(text: string): string[]`
+- `getTravelTimeInSeconds(distance: number, unitSpeed: number): number`
+- `secondsToHms(timestamp: number): string`
+
+### TWSDK_Player
+
+- `getPlayer(): Object`
+- `getSpecializedRanks(): Object`
+- `getFeatures(): Object`
+- `getPlayerInfo(): Object`
+
+### TWSDK_Village
+
+- `getVillage(): Object`
+- `getAllVillages(): Object[]`
+- `getAllVillagesMap(): Object`
+- `refreshAllVillages(): void`
+
+### TWSDK_Combat
+
+- `getUnits(): Object[]`
+- `getUnitStats(unitId: string): Object`
+- `getUnitsByType(type: string): Object[]`
+- `getArmyComposition(): Object`
+- `getTrainingQueue(): Object[]`
+- `getDefenses(): Object`
+
+### TWSDK_Research
+
+- `getTechs(): Object`
+- `getCurrentResearch(): Object | null`
+- `getResearchQueue(): Object[]`
+- `getTechStatus(unitId: string): Object | null`
+- `getKnight(): Object`
+
+### TWSDK_Buildings
+
+- `getBuildingQueue(): Object`
+- `getNextBuildings(): Object[]`
+
+### TWSDK_Economy
+
+- `getItems(): Object`
+- `getActiveEffects(): Object[]`
+- `getDailyBonus(): Object`
+- `getFarmData(): Object`
+- `getQuests(): Object`
+- `getQuestProgress(questId: string): Object | null`
+- `getQuestRewards(): Object[]`
+
+### TWSDK_Awards
+
+- `getDailyAwards(): Object[]`
+- `getDailyAwardProgress(title: string): Object | null`
+- `fetchDailyAwardsFromServer(): Promise<Object[]>`
+- `getDailyAwardsAsync(): Promise<Object[]>`
+- `getDailyAwardProgressAsync(title: string): Promise<Object | null>`
+
+### TWSDK_Logger
+
+- `setLevel(level: string): void`
+- `setEnabled(flag: boolean): void`
+- `enable(): void`
+- `disable(): void`
+- `setPrefix(prefix: string): void`
+- `setTimestamp(flag: boolean): void`
+- `setHandler(fn: Function): void`
+- `log(level: string, ...args): void`
+- `debug/info/warn/error(...args): void`
+
+### TWSDK_WorldData (via TWSDK.worldData)
+
+- `get(entity: string, maxAgeHours?: number): Promise<Object[]>`
+- `parseCSV(text: string): string[][]`
+- `formatData(data: any[], entity: string): Object[]`
+- `saveToDB(dbName: string, table: string, keyId: string, data: any[]): Promise<void>`
+- `getFromDB(dbName: string, table: string): Promise<any[]>`
+
+### TWSDK_UI (via TWSDK.ui)
+
+- `escapeHtml(str: string): string`
+- `getGlobalStyle(): string`
+- `renderBoxWidget(config: Object): void`
+- `renderFixedWidget(config: Object): void`
+- `createSection(title: string, content: string, options?: Object): string`
+- `createTable(columns: Object[], rows: Object[], options?: Object): string`
+- `createActionBar(leftControls: any[], rightButtons: Object[], options?: Object): string`
+- `createToggleButton(moduleName: string, isRunning: boolean): Object`
+- `createDialog(config: Object): Object`
+- `createListenerManager(moduleName: string): Object`
+- `createModuleLayout(config: Object): string`
+
+### TWSDK (Core)
+
+- `getWorldInfo(): Object`
+- `getAll(): Object`
+- `isReady(): boolean`
+- `debug(): void`
+
+---
 
 ## Histórico e versão
 
